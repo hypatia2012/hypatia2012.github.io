@@ -1,12 +1,86 @@
-﻿---
-layout: default
-title: 我的Blog
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
 
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-	{% for post in site.posts %} 
-		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-　　{% endfor %}
-</ul>
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Windows 调试技术 by hypatia2012</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/hypatia2012">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Windows 调试技术</h1>
+            <h2>C/C++</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <div id="no-downloads">
+        <span class="inner">
+        </span>
+      </div>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="1处理符号链接" class="anchor" href="#1%E5%A4%84%E7%90%86%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>1：处理符号链接</h1>
+
+<p>当有源代码的时候，创建符号链接是非常方便的调试方法（release版本）
+符号链接可以非常好的使用</p>
+
+<h2>
+<a id="如何创建一个符号链接" class="anchor" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>如何创建一个符号链接</h2>
+
+<p>假如文件名称test.cpp
+在vc command 端口输入如下命令
+cl.exe /Zi test.cpp</p>
+
+<h2>
+<a id="如何删除一个符号链接" class="anchor" href="#%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%E4%B8%80%E4%B8%AA%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>如何删除一个符号链接</h2>
+
+<p>del /f *.pdb</p>
+
+<h1>
+<a id="2利用vc-加载可执行程序" class="anchor" href="#2%E5%88%A9%E7%94%A8vc-%E5%8A%A0%E8%BD%BD%E5%8F%AF%E6%89%A7%E8%A1%8C%E7%A8%8B%E5%BA%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>2：利用VC 加载可执行程序</h1>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>Projects by <a href="https://github.com/hypatia2012">hypatia2012</a> can be found on <a href="https://github.com/hypatia2012">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>

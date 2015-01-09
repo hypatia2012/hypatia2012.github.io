@@ -1,0 +1,1 @@
+{"name":"Windows 调试技术","tagline":"C/C++","body":"#1：处理符号链接\r\n当有源代码的时候，创建符号链接是非常方便的调试方法（release版本）\r\n符号链接可以非常好的使用\r\n## 如何创建一个符号链接\r\n假如文件名称test.cpp\r\n在vc command 端口输入如下命令\r\ncl.exe /Zi test.cpp\r\n\r\n## 如何删除一个符号链接\r\ndel /f *.pdb\r\n#2：利用VC 加载可执行程序\r\n","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
